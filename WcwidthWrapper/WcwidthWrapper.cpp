@@ -18,5 +18,5 @@ int WcwidthWrapper::GetWidth(Rune value, Nullable<Wcwidth::Unicode> version)
 
 int WcwidthWrapper::GetWidth(char value, Nullable<Wcwidth::Unicode> version)
 {
-	return Wcwidth::UnicodeCalculator::GetWidth(value, version);
+	return Wcwidth::UnicodeCalculator::GetWidth(static_cast<int>(value), version);
 }
